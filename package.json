@@ -1,0 +1,19 @@
+{
+  "name": "boilerplate-js-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "start": "live-server"
+  },
+  "author": "kingawb",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.2",
+    "jest": "^26.0.1"
+  }
+}
