@@ -2,7 +2,7 @@ import { Counter } from './counter.js';
 
 function main() {
   const count = document.querySelector('.count');
-  const current = parseInt(count.innerText);
+  const current = parseInt(count.innerHTML);
   const increaseButton = document.querySelector('.increase-btn');
   const decreaseButton = document.querySelector('.decrease-btn');
 

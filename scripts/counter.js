@@ -7,7 +7,8 @@ export class Counter {
 
   increase() {
     this.config.current += 1;
-    this.config.count.innerText = this.config.current;
+    // console.log('in increase fn', );
+    this.render();
   }
 
   decrease() {
@@ -15,7 +16,13 @@ export class Counter {
       return;
     }
     this.config.current -= 1;
-    this.config.count.innerText = this.config.current;
+    this.render();
+  }
+
+  render() {
+    if (this.config.count) {
+      this.config.count.innerHTML = this.config.current;
+    }
   }
 
   setupClickEvents() {
