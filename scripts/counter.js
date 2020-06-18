@@ -7,7 +7,6 @@ export class Counter {
 
   increase() {
     this.config.current += 1;
-    // console.log('in increase fn', );
     this.render();
   }
 
