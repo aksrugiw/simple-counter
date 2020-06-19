@@ -10,10 +10,12 @@ export class Counter {
   increase() {
     this.config.current += 1;
     this.render();
+    this.config.notification.showNotification(this.config.current);
   }
 
   decrease() {
     if (!this.config.current) {
+      this.config.notification.showNotification(0);
       return;
     }
     this.config.current -= 1;
@@ -23,7 +25,6 @@ export class Counter {
   render() {
     if (this.config.count) {
       this.config.count.innerHTML = this.config.current;
-      this.config.notification.showNotification(this.config.current);
     }
   }
 
