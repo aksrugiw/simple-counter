@@ -36,4 +36,18 @@ describe('Notification', () => {
 
     expect(notification.hideNotification).toHaveBeenCalled();
   });
+
+  test('hide overlay after click close button', () => {
+    const close = document.querySelector('.notification .close');
+    const overlay = document.querySelector('.overlay');
+    const notification = new Notification({
+      close,
+      overlay,
+    });
+
+    notification.setupClickEvents();
+    close.click();
+
+    expect(overlay.classList.contains('hide')).toBe(true);
+  });
 });
