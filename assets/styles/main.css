@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+@media (max-width: 62em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 48em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 31em) {
+  html {
+    font-size: 40%;
+  }
+}
+
 body {
   background: #d8eefe;
   font-family: 'Lato', sans-serif;
@@ -10,24 +26,28 @@ body {
   margin: 0;
 }
 
-.main-header {
+.header {
+  margin: 0 4rem;
+}
+
+.title {
   font-weight: 600;
   color: #094067;
-  font-size: 3.5rem;
+  font-size: 5.6rem;
 }
 
 .description {
   font-weight: normal;
   text-align: center;
   color: #094067;
-  font-size: 1.2rem;
+  font-size: 3rem;
 }
 
-main {
+.main {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 4.5rem;
 }
 
 .counter {
@@ -35,19 +55,21 @@ main {
 }
 
 .btn {
-  width: 115px;
-  height: 115px;
+  width: 9rem;
+  height: 9rem;
   background: #3da9fc;
-  border: 6px solid #094067;
-  border-radius: 5px;
-  font-size: 4rem;
+  border: 0.6rem solid #094067;
+  border-radius: 0.5rem;
+  font-size: 6rem;
   color: #fffffe;
+  vertical-align: middle;
 }
 
 .count {
-  font-size: 4.2rem;
+  font-size: 10rem;
   color: #ef4565;
   margin: 0 12%;
+  vertical-align: middle;
 }
 
 .footer {
@@ -56,7 +78,7 @@ main {
 }
 
 .footer p {
-  font-size: 14px;
+  font-size: 1.6rem;
   text-align: center;
   color: #5f6c7b;
   margin: 0;
@@ -68,7 +90,7 @@ main {
 }
 
 .overlay {
-  background-color: #094067bd;
+  background-color: rgba(9, 64, 103, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,15 +107,15 @@ main {
   display: flex;
   justify-content: space-between;
   background-color: #fffffe;
-  width: 50%;
-  border-radius: 5px;
-  font-size: 1.2rem;
+  width: 60rem;
+  border-radius: 0.5rem;
+  font-size: 3rem;
   color: #5f6c7b;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .notification .content {
-  margin: 1rem;
+  margin: 3rem 1rem;
 }
 
 .notification .close {
