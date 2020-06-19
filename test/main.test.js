@@ -1,4 +1,5 @@
 import { Counter } from '../scripts/counter.js';
+import { Notification } from '../scripts/notification.js';
 
 let count, current, increaseButton, decreaseButton, counter;
 beforeEach(() => {
@@ -11,11 +12,16 @@ beforeEach(() => {
   current = parseInt(count.innerHTML);
   increaseButton = document.querySelector('.increase-btn');
   decreaseButton = document.querySelector('.decrease-btn');
+  const notification = new Notification({
+    showNotification: jest.fn(),
+    messages: { 1: 'test' },
+  });
   counter = new Counter({
     current,
     count,
     increaseButton,
     decreaseButton,
+    notification,
   });
 });
 

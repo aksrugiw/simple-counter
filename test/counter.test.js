@@ -10,8 +10,12 @@ describe('Counter', () => {
   });
 
   test('increase current number when call increase', () => {
+    const notification = {
+      showNotification: jest.fn(),
+    };
     const counter = new Counter({
       current: 0,
+      notification,
     });
 
     counter.increase();
@@ -29,14 +33,31 @@ describe('Counter', () => {
     expect(counter.config.current).toBe(0);
   });
 
-  test('not decrease current number if equal 0', () => {
+  test('does not call render when try to decrease 0', () => {
+    const notification = {
+      showNotification: jest.fn(),
+    };
     const counter = new Counter({
       current: 0,
+      notification,
     });
     counter.render = jest.fn();
 
     counter.decrease();
 
     expect(counter.render).not.toHaveBeenCalled();
+  });
+
+  test('display notification when try to decrease 0', () => {
+    const notification = {
+      showNotification: jest.fn(),
+    };
+    const counter = new Counter({
+      current: 0,
+      notification,
+    });
+    counter.decrease();
+
+    expect(counter.config.notification.showNotification).toHaveBeenCalled();
   });
 });
