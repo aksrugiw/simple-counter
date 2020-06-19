@@ -9,19 +9,23 @@
   <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 
-
 <body>
+  <div class="overlay hide">
+    <div class="notification">
+      <p class="content"></p>
+      <div class="close">x</div>
+    </div>
+  </div>
   <header>
     <h1 class="main-header">Simple Counter</h1>
-
     <h2 class="description">Start counting by clicking below buttons and see what happened 🙌</h2>
     <section class="counter">
   </header>
   <main>
     <section class="counter">
-      <button class="btn increase-btn">+</button>
-      <span class="count">99</span>
       <button class="btn decrease-btn">-</button>
+      <span class="count">0</span>
+      <button class="btn increase-btn">+</button>
     </section>
   </main>
   <footer class="footer">

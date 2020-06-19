@@ -64,3 +64,25 @@ main {
   text-decoration-line: underline;
   color: #3da9fc;
 }
+
+.overlay {
+  background-color: #00ffff9c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.overlay.hide {
+  display: none;
+}
+
+.notification {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 50%;
+  border: 1px solid black;
+}
